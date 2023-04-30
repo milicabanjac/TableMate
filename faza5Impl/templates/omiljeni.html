@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>omiljeniObjekti</title>
+</head>
+<body>
+    <div class="container">
+        {% if objekti %}
+        <ul>
+            <h3>Vasi omiljeni objekti su:</h3>
+            <br>
+            {% for objekat in objekti %}
+                <li>
+                    {{ objekat.naziv }}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+            <h3>Nemate omiljene objekte</h3>
+    {% endif %}
+    </div>
+</body>
+</html>
